@@ -1,13 +1,19 @@
 
 
 :root{
-    --mainColor: #eaeaea;
-    --secondaryColor: #fff; 
+    --mainColor:#eaeaea;
+    --secondaryColor:#fff; 
 
-    --borderColor: #c1c1c1; 
+    --borderColor:#c1c1c1; 
 
-    --mainText: black;
-    --secondaryText: #4b5156;
+    --mainText:black;
+    --secondaryText:#4b5156;
+
+    --themeDotBorder:#24292e;
+
+    --previewBg:rgb(251, 249, 243, 0.8);
+    --previewShadow:#f0ead6;
+
     /**to create a variable you're going to do --nameHere : #anycolor; -- allows you to use a color repeatedly NEAT **/
 }
 
@@ -84,7 +90,6 @@ h6 { font-size: 16px;}
 
     display: grid; /** The entire intro wrapper now is a grid**/
     grid-template-columns: 1fr 1fr; /** Set the column for the amount and the size --> basically whats going on is its going to take two columns that are going to take up two fractions**/
-    grid-template-rows: 3em 30em;
     grid-template-areas: /** Creating the layout. Step one is to create the identifiers. You see at the bottom we gave some of the tags some identifiers. **/
     'nav-wrapper nav-wrapper' /**When you create a new string you are creating a new row. Spanning that grid across you would repeat nav-wrapper**/
     'left-column right-column' /** telling the grid template to take the left and the right column to be put next to each other**/
@@ -144,14 +149,138 @@ h6 { font-size: 16px;}
 
 .left-column{
     grid-area: left-column;
+    padding-top: 5opx;
+    padding-bottom: 50px;
+}
+
+#profile_pic{
+    display: block;
+    margin: 0 auto;
+
+    height: 200px;
+    width: 200px;
+    object-fit: cover; /** Make sure that no matter the size of the image it won't distort it. just going to position and crop where it needs too**/
+    border:2px solid var(--borderColor);
+}
+
+#theme-options-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+
+.theme-dot{
+    height: 30px;
+    width: 30px;
+    background-color: black;
+    border-radius: 50%;
+
+    margin: 5px;
+    border:2px solid var(--themeDotBorder);
+
+    -webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    -maz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);  
+    
+    cursor: pointer; /** this is a hover effect so that when you hover it does its thing**/
+}
+
+.theme-dot:hover{
+    border-width: 5px;
+}
+
+#light-mode{
+    background-color: #fff;
+}
+
+#blue-mode{
+    background-color: #192734;
+}
+
+#green-mode{
+    background-color: #78866b;
+}
+
+#purple-mode{
+    background-color: #7E4C74;
+}
+
+#settings-note{
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
 }
 
 .right-column{
     grid-area: right-column;
+    display: grid;
+    align-content: center;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#preview-shadow{
+    background-color: var(--previewShadow);
+    width: 300px;
+    height: 180px;
+    padding-left: 30px;
+    padding-top: 30px;
+}
+#preview{
+    width: 300px;
+    border:1.5px solid #17a2b8;
+    background-color: var(--previewBg);
+    padding: 15px;
+    position: relative;
+}
+
+.corner{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border:1.5px solid #17a2b8;
+    background-color: #fff;
+    position: absolute;
+}
+
+#corner-tl{
+    top: -5px;
+    right: -5px;
+}
+
+#corner-tr{
+    top: -5px;
+    left: -5px;
+}
+
+#corner-bl{
+    bottom: -5px;
+    right: -5px;
+}
+
+#corner-br{
+    bottom: -5px;
+    left: -5px;
 }
 
 @media screen and (max-width: 1200px){ /** adding this media query allows the screen to adjsut properly, when you change the screen size it should adjust and center itself**/
     .main-container{
         width: 95%;
+    }
+}
+
+@media screen and (max-width: 800px){ /**whenever our screens starts collapsing we're going to do this so it doesn't overflow. grid works perfectly for that**/
+    .intro-wrapper{ /**at 800 pixles I need this to be a full column and I want this to fall underneath it. one whole column**/
+        grid-template-columns: 1fr; /** only have one column and making it the full width of the container**/
+        grid-template-areas:
+            'nav-wrapper' /**span one column**/
+            'left-column' 
+            'right-column' /**I want the right column to go below**/
+        ;
+    }
+
+    .right-column{
+        justify-content: center;
     }
 }
