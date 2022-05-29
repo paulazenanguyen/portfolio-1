@@ -14,6 +14,8 @@
     --previewBg:rgb(251, 249, 243, 0.8);
     --previewShadow:#f0ead6;
 
+    --buttonColor:black;
+
     /**to create a variable you're going to do --nameHere : #anycolor; -- allows you to use a color repeatedly NEAT **/
 }
 
@@ -94,6 +96,10 @@ h6 { font-size: 16px;}
     'nav-wrapper nav-wrapper' /**When you create a new string you are creating a new row. Spanning that grid across you would repeat nav-wrapper**/
     'left-column right-column' /** telling the grid template to take the left and the right column to be put next to each other**/
     ;
+}
+
+#navigation a{
+    color: var(--mainText);
 }
 
 .nav-wrapper{
@@ -205,7 +211,7 @@ h6 { font-size: 16px;}
     background-color: #7E4C74;
 }
 
-#settings-note{
+#setting-notes{
     font-size: 12px;
     font-style: italic;
     text-align: center;
@@ -262,6 +268,107 @@ h6 { font-size: 16px;}
 #corner-br{
     bottom: -5px;
     left: -5px;
+}
+
+.about-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    padding-bottom: 50px;
+    padding-top: 50px;
+    gap: 100px;
+}
+
+#skills{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--previewShadow);
+}
+
+.social-links{
+    display: grid;
+    align-content: center;
+    text-align: center;
+}
+
+#social_img{
+    width: 100%;
+}
+
+.post-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 320px);
+    gap:20px;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.post{
+    border:1px solid var(--borderColor);
+    -webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    -maz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);  
+}
+
+.thumbnail{
+    display: block;
+    width: 100%;
+    height:180px;
+    object-fit: cover;
+}
+
+.post-preview{
+    background-color: #fff;
+    padding:15px;
+}
+
+.post-title{
+    color: black;
+    margin: 0;
+}
+
+.post-intro{
+    color:#4b5156;
+    font-size: 14px;
+}
+
+#contact-form{
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid var(--borderColor);
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--mainColor);
+    margin-bottom: 50px;
+}
+
+.input-field{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--secondaryColor);
+    border-radius: 5px;
+    border: 1px solid var(--borderColor);
+    font-size: 14px;
+}
+
+#contact-form label{
+    line-height: 2.7em;
+}
+
+#contact-form textarea{
+    min-height: 100px;
+    font-size: 14px;
+}
+
+#submit-btn{
+    margin-top: 10px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+    background-color: var(--buttonColor);
+    border: none;
 }
 
 @media screen and (max-width: 1200px){ /** adding this media query allows the screen to adjsut properly, when you change the screen size it should adjust and center itself**/

@@ -9,9 +9,13 @@
         <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
 
 
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+Onedisplay=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" type="text/css" href="default.css" 
+        <link rel="stylesheet" type="text/css" href="default.css">
+
+        <link id="theme-style" rel="stylesheet" type="text/css" href="">
     </head>
     <body>
 
@@ -68,21 +72,118 @@
 
         <section class="s2">
             <div class="main-container">
-                About
+                <div class="about-wrapper">
+                    <div class="about-me">
+                        <h4>More About Me</h4>
+                        
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus unde nesciunt vitae molestias iusto eligendi. Rerum nemo eos, quam, blanditiis sed autem quasi quisquam accusantium eveniet perferendis, animi dignissimos magnam.</p>
+                        
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat officiis voluptas voluptatum, omnis nulla blanditiis voluptates accusantium nostrum rerum illo! Ipsa consequuntur molestiae pariatur repellendus incidunt a cum nihil cumque.</p>
+                            
+                        <hr>
+
+                        <h4>TOP EXPERTISE</h4>
+
+                        <p>Fullstack developer with primary focus on Django + React: <a target="_blank" href="Paula Nguyen (2).pdf">Download Resume</a></p>
+
+                        <div id="skills">
+                            <ul>
+                                <li>React</li>
+                                <li>Ruby</li>
+                                <li>Ruby on Rails</li>
+                                <li>Javascript</li>
+                                <li>Typescript</li>
+                                <li>PostgresQL</li>
+                            </ul>
+                            <ul>
+                                <li>React</li>
+                                <li>Ruby</li>
+                                <li>Ruby on Rails</li>
+                                <li>Javascript</li>
+                                <li>Typescript</li>
+                                <li>PostgresQL</li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="social-links">
+                        <img id="social_img" src="images/follow.jpeg">
+                        <h3>Find me on Twitter & Youtube</h3>
+                        <a target="_blank" href="">Github</a>
+                        <a target="_blank" href="">LinkedIn</a>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section class="s1">
             <div class="main-container">
-                Portfolio
+                <h3 style="text-align: center;">Some of my past projects</h3>
+            
+            
+                <div class="post-wrapper">
+
+                <div>
+                    <div class="post">
+                        <img class="thumbnail" src="images/dennis.jpeg">
+                        <div class="post-preview">
+                            <h6 class="post-title">Post Title</h6>
+                            <p class="post-intro">This is a sentence. Some more text.</p>
+                            <a href="#">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="post">
+                        <img class="thumbnail" src="images/dennis.jpeg">
+                        <div class="post-preview">
+                            <h6 class="post-title">Post Title</h6>
+                            <p class="post-intro">This is a sentence. Some more text.</p>
+                            <a href="#">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="post">
+                        <img class="thumbnail" src="images/dennis.jpeg">
+                        <div class="post-preview">
+                            <h6 class="post-title">Post Title</h6>
+                            <p class="post-intro">This is a sentence. Some more text.</p>
+                            <a href="#">Read More</a>
+                        </div> 
+                    </div>
+                </div>
+                </div>
             </div>
         </section>
 
         <section class="s2">
             <div class="main-container">
-                Contact
+                <h3 style="text-align: center;">Get in Touch</h3>
+                
+                <form id="contact-form">
+                    <label>Name</label>
+                    <input class="input-field" type="text" name="name">
+                    
+                    <label>Subject</label>
+                    <input class="input-field" type="text" name="subject">
+                    
+                    <label>Email</label>
+                    <input class="input-field" type="text" name="email">
+
+                    <label>Message</label>
+                    <textarea class="input-field" name="message"></textarea>
+                    
+
+                    <input id="submit-btn" type="submit" value="Send">
+                </form>
             </div>
         </section>
 
+        <script type="text/javascript" scr="script.js"></script>
+        
     </body>
 </html>
