@@ -292,10 +292,12 @@ h6 { font-size: 16px;}
     display: grid;
     align-content: center;
     text-align: center;
+    
 }
 
 #social_img{
-    width: 100%;
+    width: 80%;
+    justify-content: center;
 }
 
 .post-wrapper{
